@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 22 May, 2018 11:41:47 AM by Hibernate Tools 5.2.8.Final -->
+<hibernate-mapping default-lazy="false">
+ <class catalog="farmerportal" name="com.pojo.Farmer" table="farmer">
+  <id name="farmerId" type="java.lang.Integer">
+   <column name="Farmer_ID"/>
+   <generator class="identity"/>
+  </id>
+  <property generated="never" lazy="false" name="farmerName" type="string">
+   <column length="100" name="Farmer_Name" not-null="true">
+    <comment>Full Name Of Farmer</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="farmerEmail" type="string">
+   <column length="100" name="Farmer_Email" not-null="true">
+    <comment>Email Id Of Farmer</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="farmerUsername" type="string">
+   <column length="100" name="Farmer_Username" not-null="true">
+    <comment>Username Of Farmer For Login</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="farmerPassword" type="string">
+   <column length="100" name="Farmer_Password" not-null="true">
+    <comment>Password Of Farmer For Login</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="farmerMobile" type="string">
+   <column length="50" name="Farmer_Mobile" not-null="true">
+    <comment>Mobile Number Of Farmer</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="gender" type="string">
+   <column length="100" name="Gender" not-null="true">
+    <comment>Gender Of Farmer</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="totalLand" type="java.lang.Integer">
+   <column name="Total_Land">
+    <comment>Total Amt Of Land Of Farmer</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="soilType" type="string">
+   <column length="100" name="Soil_Type">
+    <comment>Soil Type Of Farmers Farm</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="crops" type="string">
+   <column length="100" name="Crops">
+    <comment>Taking Crops</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="address" type="string">
+   <column length="100" name="Address" not-null="true">
+    <comment>Address Of The Farmer</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="state" type="string">
+   <column length="100" name="State" not-null="true">
+    <comment>State Of Farmer</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="city" type="string">
+   <column length="100" name="City" not-null="true">
+    <comment>City Of Farmer</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="block" type="string">
+   <column length="100" name="Block">
+    <comment>Block Of The Farmer</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="zip" type="string">
+   <column length="10" name="Zip" not-null="true">
+    <comment>Zip Code Of Address</comment>
+   </column>
+  </property>
+  <set fetch="select" inverse="true" lazy="true" name="demos"
+   sort="unsorted" table="demo">
+   <key>
+    <column name="F_ID" not-null="true">
+     <comment>Farmers ID</comment>
+    </column>
+   </key>
+   <one-to-many class="com.pojo.Demo"/>
+  </set>
+  <set fetch="select" inverse="true" lazy="true" name="purchases"
+   sort="unsorted" table="purchase">
+   <key>
+    <column name="F_ID" not-null="true">
+     <comment>Farmer ID Forign Key</comment>
+    </column>
+   </key>
+   <one-to-many class="com.pojo.Purchase"/>
+  </set>
+  <set fetch="select" inverse="true" lazy="true" name="soilTests"
+   sort="unsorted" table="soil_test">
+   <key>
+    <column name="F_ID" not-null="true">
+     <comment>Farmer ID</comment>
+    </column>
+   </key>
+   <one-to-many class="com.pojo.SoilTest"/>
+  </set>
+  <set fetch="select" inverse="true" lazy="true" name="carts"
+   sort="unsorted" table="cart">
+   <key>
+    <column name="Farmer_ID" not-null="true">
+     <comment>Farmer Id</comment>
+    </column>
+   </key>
+   <one-to-many class="com.pojo.Cart"/>
+  </set>
+ </class>
+</hibernate-mapping>

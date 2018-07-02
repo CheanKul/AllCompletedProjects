@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageAdmin.master.cs"
+    Inherits="MasterPageAdmin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Styles/StyleFile.css" rel="stylesheet" type="text/css" />
+</head>
+
+<script type="text/javascript">
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+    }
+</script>
+<body>
+    <form id="form1" runat="server">
+    <div id="header">
+      
+        <div id="div10" class="divForText">
+            <span style="font-size: 30px; cursor: pointer; color: Silver; border-color: Black"
+                onclick="openNav()">&#9776;</span></div>
+        </div>
+     <asp:Image ID="Image1" runat="server" Height="269px" ImageUrl="~/Images/Patient.jpg"
+            Width="100%" />
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <a href="AddDoctor.aspx">Add Doctor</a> 
+            <a href="LogOutPatient.aspx">Log Out</a>
+    </div>
+    <div id="main">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 22 May, 2018 11:41:47 AM by Hibernate Tools 5.2.8.Final -->
+<hibernate-mapping default-lazy="false">
+ <class catalog="farmerportal" name="com.pojo.Category" table="category">
+  <id name="id" type="java.lang.Integer">
+   <column name="id"/>
+   <generator class="identity"/>
+  </id>
+  <property generated="never" lazy="false" name="category" type="string">
+   <column length="100" name="category" not-null="true">
+    <comment>Category</comment>
+   </column>
+  </property>
+  <set fetch="select" inverse="true" lazy="true" name="machinaries"
+   sort="unsorted" table="machinary">
+   <key>
+    <column name="Category" not-null="true">
+     <comment>Category Of Machine</comment>
+    </column>
+   </key>
+   <one-to-many class="com.pojo.Machinary"/>
+  </set>
+ </class>
+</hibernate-mapping>

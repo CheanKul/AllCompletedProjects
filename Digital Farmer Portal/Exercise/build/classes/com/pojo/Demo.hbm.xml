@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 22 May, 2018 11:41:47 AM by Hibernate Tools 5.2.8.Final -->
+<hibernate-mapping default-lazy="false">
+ <class catalog="farmerportal" name="com.pojo.Demo" table="demo">
+  <id name="demoId" type="java.lang.Integer">
+   <column name="Demo_ID"/>
+   <generator class="identity"/>
+  </id>
+  <many-to-one class="com.pojo.Farmer" fetch="select" name="farmer">
+   <column name="F_ID" not-null="true">
+    <comment>Farmers ID</comment>
+   </column>
+  </many-to-one>
+  <many-to-one class="com.pojo.Machinary" fetch="select" name="machinary">
+   <column name="M_ID" not-null="true">
+    <comment>Machinary ID</comment>
+   </column>
+  </many-to-one>
+  <property generated="never" lazy="false" name="address" type="string">
+   <column length="100" name="Address" not-null="true">
+    <comment>Address For Demo</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="mobile" type="string">
+   <column length="100" name="Mobile" not-null="true">
+    <comment>Mobile For Contact</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="date" type="string">
+   <column length="100" name="Date" not-null="true">
+    <comment>Date Of Request</comment>
+   </column>
+  </property>
+ </class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+.tableText{
+	font-family: TimesNewRoman;
+	font-size: 14px;
+}
+.tableHeader{
+	
+	font-family: TimesNewRoman;
+	font-size: 19px;
+}
+
+th{
+	vertical-align: middle;
+}

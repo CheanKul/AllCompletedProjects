@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="farmerportal" match-name="admin"/>
+  <table-filter match-catalog="farmerportal" match-name="cart"/>
+  <table-filter match-catalog="farmerportal" match-name="category"/>
+  <table-filter match-catalog="farmerportal" match-name="contact"/>
+  <table-filter match-catalog="farmerportal" match-name="demo"/>
+  <table-filter match-catalog="farmerportal" match-name="farmer"/>
+  <table-filter match-catalog="farmerportal" match-name="machinary"/>
+  <table-filter match-catalog="farmerportal" match-name="product"/>
+  <table-filter match-catalog="farmerportal" match-name="product_type"/>
+  <table-filter match-catalog="farmerportal" match-name="purchase"/>
+  <table-filter match-catalog="farmerportal" match-name="soil_test"/>
+</hibernate-reverse-engineering>

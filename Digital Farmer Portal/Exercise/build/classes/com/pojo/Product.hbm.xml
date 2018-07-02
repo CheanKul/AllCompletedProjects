@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 22 May, 2018 11:41:47 AM by Hibernate Tools 5.2.8.Final -->
+<hibernate-mapping default-lazy="false">
+ <class catalog="farmerportal" name="com.pojo.Product" table="product">
+  <id name="productId" type="java.lang.Integer">
+   <column name="Product_ID"/>
+   <generator class="identity"/>
+  </id>
+  <many-to-one class="com.pojo.ProductType" fetch="select" name="productType">
+   <column name="Product_Type" not-null="true">
+    <comment>Product Type ID</comment>
+   </column>
+  </many-to-one>
+  <property generated="never" lazy="false" name="productImg" type="binary">
+   <column name="Product_Img" not-null="true">
+    <comment>Image Of Product</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="productName" type="string">
+   <column length="100" name="Product_Name" not-null="true">
+    <comment>Name Of The Product</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="productDescription" type="string">
+   <column name="Product_Description" not-null="true">
+    <comment>Description Of Product</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="price" type="int">
+   <column name="Price" not-null="true">
+    <comment>Price Of The Product</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="stockQty" type="int">
+   <column name="Stock_Qty" not-null="true">
+    <comment>Quantity Of Product Available</comment>
+   </column>
+  </property>
+  <set fetch="select" inverse="true" lazy="true" name="carts"
+   sort="unsorted" table="cart">
+   <key>
+    <column name="Product_ID" not-null="true">
+     <comment>Product Id</comment>
+    </column>
+   </key>
+   <one-to-many class="com.pojo.Cart"/>
+  </set>
+  <set fetch="select" inverse="true" lazy="true" name="purchases"
+   sort="unsorted" table="purchase">
+   <key>
+    <column name="P_ID" not-null="true">
+     <comment>Product ID Forign Key</comment>
+    </column>
+   </key>
+   <one-to-many class="com.pojo.Purchase"/>
+  </set>
+ </class>
+</hibernate-mapping>

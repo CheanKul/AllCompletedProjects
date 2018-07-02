@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/common_full_open_on_phone"
+        android:background="@drawable/border_view"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:fadeScrollbars="true" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Title"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_alignTop="@+id/icon"
+        android:layout_toEndOf="@+id/icon" />
+
+    <TextView
+        android:id="@+id/mesage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message"
+        android:textSize="18sp"
+        android:visibility="visible"
+        android:textColor="#000"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/title"
+        android:layout_alignStart="@+id/title"/>
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/mesage"
+        android:layout_alignStart="@+id/mesage" />
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="date"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/address"
+        android:layout_alignStart="@+id/address" />
+    <TextView
+        android:id="@+id/record_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="id"
+        android:visibility="gone" />
+
+</RelativeLayout>

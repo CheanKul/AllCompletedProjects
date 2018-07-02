@@ -1,0 +1,26 @@
+package FarmerPortal;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class Connect {
+
+	static SessionFactory sf;
+	
+	static{
+        try {
+            // Create the SessionFactory from hibernate.cfg.xml
+            sf=new Configuration().configure().buildSessionFactory();
+        }
+        catch (Throwable ex) {
+            // Make sure you log the exception, as it might be swallowed
+            System.err.println("Initial SessionFactory creation failed." + ex);
+            throw new ExceptionInInitializerError(ex);
+        }
+    }
+
+    public static SessionFactory getSessionFactory() {
+        return sf;
+    }
+}

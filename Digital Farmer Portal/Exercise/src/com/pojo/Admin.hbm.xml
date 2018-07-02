@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 22 May, 2018 11:41:47 AM by Hibernate Tools 5.2.8.Final -->
+<hibernate-mapping default-lazy="false">
+ <class catalog="farmerportal" name="com.pojo.Admin" table="admin">
+  <id name="adminId" type="java.lang.Integer">
+   <column name="Admin_ID"/>
+   <generator class="identity"/>
+  </id>
+  <property generated="never" lazy="false" name="adminName" type="string">
+   <column length="100" name="Admin_Name" not-null="true">
+    <comment>Name Of Admin</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="adminUsername" type="string">
+   <column length="100" name="Admin_Username" not-null="true">
+    <comment>Username Of Admin</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="adminPassword" type="string">
+   <column length="100" name="Admin_Password" not-null="true">
+    <comment>Password Of Admin</comment>
+   </column>
+  </property>
+ </class>
+</hibernate-mapping>

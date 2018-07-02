@@ -1,0 +1,260 @@
+﻿
+        .email-form {
+            background: #fafbfc;
+            border: 1px #dde5ed solid;
+            padding: 16px 15px;
+            display: inline-block;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            border-radius: 5px;
+            width: 420px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+        }
+        .submit-btn {
+            font-size: 14px;
+            text-shadow: none;
+            padding: 10px 25px;
+            margin-top: 0px;
+            font-weight: 400;
+            margin-left: 0px;
+            border: none;
+            letter-spacing: 0.5px;
+            border-radius: 3px;
+            display: inline-block;
+            background: #1ABC9C;
+            font-family: 'Raleway', sans-serif;
+            color: #fff;
+            text-transform: none;
+        }
+        
+        .comment {
+            font-size: 13px;
+            line-height: 20px;
+            box-shadow: inset 0 1px 1px rgba(144,164,174,0.1);
+            padding: 5px 11px;
+            box-sizing: border-box;
+            border: 1px solid #c9d7df;
+            border-radius: 2px;
+            letter-spacing: 0.5px;
+            font-family: 'Raleway', sans-serif;
+            width: 550px;
+            height: 100px;
+            vertical-align: top;
+        }
+        
+        .putbox {
+            font-size: 13px;
+            line-height: 20px;
+            box-shadow: inset 0 1px 1px rgba(144,164,174,0.1);
+            padding: 5px 11px;
+            box-sizing: border-box;
+            border: 1px solid #c9d7df;
+            border-radius: 2px;
+            letter-spacing: 0.5px;
+            width: 340px;
+        }
+
+ h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    font-family: 'Cabin', Helvetica Neue, Sans-serif;
+    letter-spacing: 0.5px;
+    margin-top: 35px;
+    color: #4c3b76;
+    line-height:0px;
+}
+
+h1
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    box-sizing: border-box; 
+    margin: 0px 0px 20px 240px;
+    font-size: 36px;
+    font-family: Cabin, &quot;
+    Helvetica Neue&quot;
+    sans-serif; font-weight: 400; 
+    line-height: inherit; 
+    color: rgb(76, 59, 118);
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal; 
+    font-variant-numeric: inherit;
+    padding: 0px;
+    border: 0px; 
+    letter-spacing: 0.5px;
+    text-align: left; 
+    orphans: 2;
+    text-indent: 0px; 
+    text-transform: none; 
+    white-space: normal;
+    widows: 2; 
+    word-spacing: 0px;
+    -webkit-text-stroke-width: 0px;
+    background-color: rgb(255, 255, 255); 
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+}
+
+    .roundBtn{
+        background: #1a62bc;
+        color: #fff;
+        padding: 10px 0px;
+        text-align: center;        
+        font-size: 16px;
+        border: none;
+        width: 80%;
+        margin:0 0 0;
+        border-radius: 4px;
+    }
+
+    .button
+    {
+            background-color: #1ABC9C; /* Green */
+            border: none;
+            color: white;
+            width:190px;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+   }
+        
+        
+        
+        .button1
+        {
+            background-color: white;
+            color: black;
+            border: 2px solid #1ABC9C;
+            font-size: x-large;
+        }
+        
+        .button1:hover
+        {
+            background-color: #1ABC9C;
+            color: white;
+        }
+        
+        
+        .button3
+        {
+            background-color: white;
+            color: black;
+            border: 2px solid #f44336;
+        }
+        
+        
+        .button3:hover
+        {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        .buttonSelected
+        {
+             background-color: #1ABC9C;
+            color: white;
+        }
+        
+        .divForText
+        {
+            position: absolute;
+            z-index: inherit;
+            top: 26px;
+            left: 23px;
+        }
+        .disabled
+        {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    body
+    {
+        font-family: "Lato" , sans-serif;
+        transition: background-color .5s;
+        margin:0 0 0 0;
+    }
+    
+    /* The side navigation menu */
+    .sidenav
+    {
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0;
+        left: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+    
+    /* The navigation menu links */
+    .sidenav a
+    {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover, .offcanvas a:focus
+    {
+        color: #f1f1f1;
+    }
+    
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn
+    {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+    #main
+    {
+        transition: margin-left .5s;
+        padding: 20px;
+    }
+    
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px)
+    {
+        .sidenav
+        {
+            padding-top: 15px;
+        }
+        .sidenav a
+        {
+            font-size: 18px;
+        }
+    }    
+    
+    .selectbox-mid {
+    border: 1px #ddd solid;
+    width: 450px;
+    height: 40px;
+    box-shadow: inset 0 1px 1px rgba(144,164,174,0.1);
+    font-size: 19px;
+    font-family: 'Open Sans', sans-serif;
+    margin-right: 5px;
+    border-radius: 3px;
+    padding-left:5px;
+}
+   

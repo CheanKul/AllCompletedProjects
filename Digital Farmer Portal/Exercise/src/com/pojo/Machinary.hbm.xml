@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 22 May, 2018 11:41:47 AM by Hibernate Tools 5.2.8.Final -->
+<hibernate-mapping default-lazy="false">
+ <class catalog="farmerportal" name="com.pojo.Machinary" table="machinary">
+  <id name="machineId" type="java.lang.Integer">
+   <column name="Machine_ID"/>
+   <generator class="identity"/>
+  </id>
+  <many-to-one class="com.pojo.Category" fetch="select" name="category">
+   <column name="Category" not-null="true">
+    <comment>Category Of Machine</comment>
+   </column>
+  </many-to-one>
+  <property generated="never" lazy="false" name="machineName" type="string">
+   <column length="100" name="Machine_Name" not-null="true">
+    <comment>Machine Name</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="engineHp" type="int">
+   <column name="Engine_HP" not-null="true">
+    <comment>Engine HP</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="engineRpm" type="string">
+   <column length="100" name="Engine_RPM" not-null="true">
+    <comment>Engine RPM</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="gears" type="string">
+   <column length="100" name="Gears" not-null="true">
+    <comment>Number Of Gears</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="speed" type="string">
+   <column length="100" name="Speed" not-null="true">
+    <comment>Speed Of Tractor</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="frontTyre" type="string">
+   <column length="100" name="Front_Tyre" not-null="true">
+    <comment>Dimension Of Front Tyre</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="rearTyre" type="string">
+   <column length="100" name="Rear_Tyre" not-null="true">
+    <comment>Dimension Of Rear Tyre</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="liftCapacity" type="string">
+   <column length="100" name="Lift_Capacity" not-null="true">
+    <comment>Lift Capacity</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="fuelCapacity" type="string">
+   <column length="100" name="Fuel_Capacity" not-null="true">
+    <comment>Fuel Capacity</comment>
+   </column>
+  </property>
+  <property generated="never" lazy="false" name="image" type="binary">
+   <column name="Image" not-null="true">
+    <comment>Image Of Tractor</comment>
+   </column>
+  </property>
+  <set fetch="select" inverse="true" lazy="true" name="demos"
+   sort="unsorted" table="demo">
+   <key>
+    <column name="M_ID" not-null="true">
+     <comment>Machinary ID</comment>
+    </column>
+   </key>
+   <one-to-many class="com.pojo.Demo"/>
+  </set>
+ </class>
+</hibernate-mapping>
